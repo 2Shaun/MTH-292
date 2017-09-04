@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\usepackage{bbding}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\author{Thomas O'Shaughnessy}
+\title{Newton's Method}
+
+\begin{document}
+\maketitle
+\section{Definitions}
+
+\textbf{Newton's Method} is a root finding algorithm that converges for functions 
+that satisfy certain
+conditions. Beginning with a guess for a root (the closer the better), our implementation
+of the algorithm will apply an iterative process to find an approximation of this root
+to an arbitrary precision. The purpose of this paper is analyze how the algorithm behaves
+for different functions and starting points (guesses).
+
+Suppose we have an iterative process, which we will call a \textbf{Newton Transform}, defined as
+\begin{gather*}
+				x \mapsto x - \frac{f(x)}{f'(x)}.
+\end{gather*}
+Our first condition should thus be that $f'(x_i) \neq 0$, for any iteration $x_i$.
+Our Newton Transform can be intuitively derived from the familiar slope definition
+\begin{gather*}
+				m=\frac{y-y_0}{x-x_0}.
+\end{gather*}
+After doing the appropriate substitutions for our linear approximation we have
+\begin{gather*}
+				f'(x_0)\approx\frac{f(x)-f(x_0)}{x-x_0},
+\end{gather*}
+where $x_0$ may be our initial guess. Notice that this expression can be rearranged
+to represent the \textbf{1st Taylor polynomial}
+\begin{gather*}
+				f(x)\approx f(x_0)+f'(x_0)(x-x_0).
+\end{gather*}
+For now, however, we are only interested in the value of $x$ when our
+linear approximation is $0$. Solving for $x$ with $f(x) = 0$, we have our Newton Transform.
+
+\end{document}
