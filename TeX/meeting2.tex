@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+
+\usepackage{bbding}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\author{Thomas O'Shaughnessy}
+\title{Meeting 2}
+
+\begin{document}
+\maketitle
+
+Consider some iterated function $f(x)$ such that some $x$ is a periodic point. If $f^{n+1}(x)=f(x)$,
+we will say that $\mathcal{O}$ of $x$ has a periodicity of $n$. We will refer to the orbit of $x$,
+the sequence of values of $f^m(x)$, as $\mathcal{O}_f$ and the periodicity of $\mathcal{O}_f$ as $n_f$.\\\\
+Let $f(x) = \frac{1}{x}$. Notice that $n_f = 2$. Now let $g(x) = x - \frac{f(x)}{f'(x)}$. Thus, $g$ is
+our Newton Transform. I will now show that $n_g = n_f$, for all $x\in\textup{Dom}(f)$. Consider the
+following differential equation.
+\begin{gather*}
+				\frac{1}{x} = x - \frac{dx}{dy}y
+\end{gather*}
+This can be interpreted as a Newton Transform that has the same effect as taking the reciprocal
+of $x$. It should seem reasonable that the periodicity of $f(x)$, on the left,
+determines the periodicity o
+
+\end{document}
